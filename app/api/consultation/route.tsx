@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       subject: `New Consultation Request from ${validatedData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1f2937; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">
+          <h2 style="color: #1f2937; border-bottom: 2px solid #00ff88; padding-bottom: 10px;">
             New Consultation Request
           </h2>
           
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
             ${validatedData.company ? `<p><strong>Company:</strong> ${validatedData.company}</p>` : ""}
           </div>
           
-          <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <div style="background: #f0fff4; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #374151; margin-top: 0;">Service Details</h3>
             <p><strong>Service Interest:</strong> ${validatedData.service}</p>
             ${validatedData.preferredDate ? `<p><strong>Preferred Date:</strong> ${validatedData.preferredDate}</p>` : ""}
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
       subject: "Consultation Request Received - BloomIntel",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1f2937; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">
+          <h2 style="color: #1f2937; border-bottom: 2px solid #00ff88; padding-bottom: 10px;">
             Thank You for Your Interest!
           </h2>
           
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
           
           <p>Thank you for reaching out to BloomIntel. We've received your consultation request for <strong>${validatedData.service}</strong> and our team will review it shortly.</p>
           
-          <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <div style="background: #f0fff4; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #374151; margin-top: 0;">What's Next?</h3>
             <ul style="color: #4b5563;">
               <li>Our AI solutions expert will review your request within 24 hours</li>

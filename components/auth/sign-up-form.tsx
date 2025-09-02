@@ -30,7 +30,7 @@ export function SignUpForm({ onSubmit, isLoading, password, setPassword }: SignU
           type="text"
           placeholder="Enter your full name"
           required
-          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#007aff] focus:ring-2 focus:ring-[#007aff]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
+          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#00ff88] focus:ring-2 focus:ring-[#00ff88]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
         />
       </div>
       <div className="space-y-3">
@@ -43,7 +43,7 @@ export function SignUpForm({ onSubmit, isLoading, password, setPassword }: SignU
           type="email"
           placeholder="Enter your email"
           required
-          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#007aff] focus:ring-2 focus:ring-[#007aff]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
+          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#00ff88] focus:ring-2 focus:ring-[#00ff88]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
         />
       </div>
       <div className="space-y-3">
@@ -59,7 +59,7 @@ export function SignUpForm({ onSubmit, isLoading, password, setPassword }: SignU
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#007aff] focus:ring-2 focus:ring-[#007aff]/20 transition-all duration-200 rounded-2xl h-14 pr-14 text-base font-sans"
+            className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#00ff88] focus:ring-2 focus:ring-[#00ff88]/20 transition-all duration-200 rounded-2xl h-14 pr-14 text-base font-sans"
           />
           <Button
             type="button"
@@ -75,7 +75,7 @@ export function SignUpForm({ onSubmit, isLoading, password, setPassword }: SignU
 
       <Button
         type="submit"
-        className="w-full bg-[#007aff] hover:bg-[#0056cc] text-white font-medium transition-all duration-200 transform hover:scale-[1.01] shadow-lg rounded-2xl h-14 mt-8 text-base font-sans"
+        className="w-full bg-[#00ff88] hover:bg-[#00cc66] text-black font-medium transition-all duration-200 transform hover:scale-[1.01] shadow-lg rounded-2xl h-14 mt-8 text-base font-sans"
         disabled={isLoading}
       >
         {isLoading ? (

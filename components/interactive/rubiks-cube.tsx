@@ -15,7 +15,7 @@ function CubeGrid() {
     }
   })
 
-  const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff8800", "#ffffff"]
+  const colors = ["#ff0000", "#00ff00", "#00ff88", "#ffff00", "#ff8800", "#ffffff"]
 
   return (
     <group ref={groupRef}>

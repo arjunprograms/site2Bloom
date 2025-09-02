@@ -8,7 +8,16 @@ import { TrendingUp, Users, Zap, Target } from "lucide-react"
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -16,7 +25,7 @@ export default function CaseStudiesPage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6 tracking-wide">
               Case{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 Studies
               </span>
             </h1>
@@ -40,7 +49,7 @@ export default function CaseStudiesPage() {
                       45% reduction in maintenance costs
                     </div>
                     <div className="flex items-center text-white/80">
-                      <Zap className="w-5 h-5 text-blue-400 mr-3" />
+                      <Zap className="w-5 h-5 text-cyan-400 mr-3" />
                       78% decrease in unplanned downtime
                     </div>
                     <div className="flex items-center text-white/80">
@@ -49,7 +58,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg p-6 backdrop-blur-sm border border-white/10">
+                <div className="bg-gradient-to-br from-lime-500/20 to-purple-500/20 rounded-lg p-6 backdrop-blur-sm border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-4">Key Technologies</h3>
                   <ul className="space-y-2 text-white/70">
                     <li>• IoT sensor integration</li>
@@ -63,7 +72,7 @@ export default function CaseStudiesPage() {
 
             <GlassCard className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-green-500/20 rounded-lg p-6 backdrop-blur-sm border border-white/10">
+                <div className="bg-gradient-to-br from-lime-500/20 to-green-500/20 rounded-lg p-6 backdrop-blur-sm border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-4">Implementation Timeline</h3>
                   <ul className="space-y-2 text-white/70">
                     <li>• Week 1-2: System analysis</li>
@@ -82,7 +91,7 @@ export default function CaseStudiesPage() {
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center text-white/80">
-                      <Users className="w-5 h-5 text-cyan-400 mr-3" />
+                      <Users className="w-5 h-5 text-lime-400 mr-3" />
                       60% improvement in diagnostic accuracy
                     </div>
                     <div className="flex items-center text-white/80">
@@ -90,7 +99,7 @@ export default function CaseStudiesPage() {
                       40% reduction in patient wait times
                     </div>
                     <div className="flex items-center text-white/80">
-                      <Target className="w-5 h-5 text-blue-400 mr-3" />
+                      <Target className="w-5 h-5 text-lime-400 mr-3" />
                       25% increase in patient satisfaction
                     </div>
                   </div>
@@ -114,7 +123,7 @@ export default function CaseStudiesPage() {
                       80% of processes automated
                     </div>
                     <div className="flex items-center text-white/80">
-                      <Users className="w-5 h-5 text-cyan-400 mr-3" />
+                      <Users className="w-5 h-5 text-lime-400 mr-3" />
                       300% increase in processing speed
                     </div>
                     <div className="flex items-center text-white/80">

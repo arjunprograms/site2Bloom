@@ -8,7 +8,16 @@ import { Bot, Shield, Zap, BarChart3, Brain, Cog } from "lucide-react"
 
 export default function CustomSolutionsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -16,7 +25,7 @@ export default function CustomSolutionsPage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-thin text-white mb-8 tracking-wide">
               Custom AI{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 Solutions
               </span>
             </h1>
@@ -28,12 +37,12 @@ export default function CustomSolutionsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             <GlassCard className="p-8 text-left">
-              <Bot className="w-16 h-16 text-blue-400 mb-6" />
+              <Bot className="w-16 h-16 text-lime-400 mb-6" />
               <h3 className="text-2xl font-thin text-white mb-4 tracking-wide">Autonomous Business Agents</h3>
               <p className="text-white/70 mb-4 font-light leading-relaxed">
                 Deploy AI workers that handle complex workflows, make decisions, and optimize operations 24/7.
               </p>
-              <div className="text-blue-400 font-medium">Average 70% reduction in manual tasks</div>
+              <div className="text-lime-400 font-medium">Average 70% reduction in manual tasks</div>
             </GlassCard>
 
             <GlassCard className="p-8 text-left">
@@ -46,12 +55,12 @@ export default function CustomSolutionsPage() {
             </GlassCard>
 
             <GlassCard className="p-8 text-left">
-              <Zap className="w-16 h-16 text-cyan-400 mb-6" />
+              <Zap className="w-16 h-16 text-lime-400 mb-6" />
               <h3 className="text-2xl font-thin text-white mb-4 tracking-wide">AI-Native Applications</h3>
               <p className="text-white/70 mb-4 font-light leading-relaxed">
                 Purpose-built AI systems that become smarter with every interaction.
               </p>
-              <div className="text-cyan-400 font-medium">ROI improvement of 300%+ within 12 months</div>
+              <div className="text-lime-400 font-medium">ROI improvement of 300%+ within 12 months</div>
             </GlassCard>
 
             <GlassCard className="p-8 text-left">
@@ -91,7 +100,7 @@ export default function CustomSolutionsPage() {
                 <h3 className="text-2xl font-thin text-white mb-6 tracking-wide">Our Approach</h3>
                 <ul className="space-y-4 text-white/80 font-light">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lime-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     Deep analysis of your business processes and pain points
                   </li>
                   <li className="flex items-start">
@@ -99,7 +108,7 @@ export default function CustomSolutionsPage() {
                     Custom AI architecture designed for your specific requirements
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lime-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     Seamless integration with existing systems and workflows
                   </li>
                   <li className="flex items-start">
@@ -112,7 +121,7 @@ export default function CustomSolutionsPage() {
                 <h3 className="text-2xl font-thin text-white mb-6 tracking-wide">Industries We Serve</h3>
                 <ul className="space-y-4 text-white/80 font-light">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lime-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     Healthcare and medical technology
                   </li>
                   <li className="flex items-start">
@@ -120,7 +129,7 @@ export default function CustomSolutionsPage() {
                     Financial services and fintech
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lime-400 rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     Manufacturing and supply chain
                   </li>
                   <li className="flex items-start">

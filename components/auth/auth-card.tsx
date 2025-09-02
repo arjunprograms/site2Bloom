@@ -132,7 +132,7 @@ export function AuthCard({
                 <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
                   <div className="w-6 h-4 bg-red-500 relative overflow-hidden rounded-sm">
                     <div className="absolute inset-0 bg-red-500"></div>
-                    <div className="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+                    <div className="absolute top-0 left-0 w-2 h-full bg-cyan-600"></div>
                     <div className="absolute top-1 left-1 w-1 h-0.5 bg-white"></div>
                   </div>
                   <ChevronDown className="w-4 h-4 text-white/40" />
@@ -246,7 +246,7 @@ export function AuthCard({
             className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl h-14 flex items-center justify-center hover:bg-black/30 transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
           >
             <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
-              <div className="w-4 h-4 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 rounded-full"></div>
+              <div className="w-4 h-4 bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 rounded-full"></div>
             </div>
           </button>
           <button

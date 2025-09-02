@@ -8,7 +8,16 @@ import { Users, MessageSquare, Target, Workflow } from "lucide-react"
 
 export default function CRMSystemsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -16,7 +25,7 @@ export default function CRMSystemsPage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6 tracking-wide">
               CRM{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 Systems
               </span>
             </h1>
@@ -27,7 +36,7 @@ export default function CRMSystemsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <GlassCard className="p-6 text-center">
-              <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <Users className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Customer Management</h3>
               <p className="text-white/70">Centralized customer data and interaction history management.</p>
             </GlassCard>
@@ -39,7 +48,7 @@ export default function CRMSystemsPage() {
             </GlassCard>
 
             <GlassCard className="p-6 text-center">
-              <Target className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Target className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Sales Pipeline</h3>
               <p className="text-white/70">Advanced sales tracking and opportunity management tools.</p>
             </GlassCard>

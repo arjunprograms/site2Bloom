@@ -8,14 +8,23 @@ import { BarChart3, TrendingUp, Eye, Brain } from "lucide-react"
 
 export default function BusinessAnalyticsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6 tracking-wide">
               Business{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 Analytics
               </span>
             </h1>
@@ -26,7 +35,7 @@ export default function BusinessAnalyticsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <GlassCard className="p-6 text-center">
-              <BarChart3 className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <BarChart3 className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Data Visualization</h3>
               <p className="text-white/70">Interactive dashboards and reports for clear business insights.</p>
             </GlassCard>
@@ -38,7 +47,7 @@ export default function BusinessAnalyticsPage() {
             </GlassCard>
 
             <GlassCard className="p-6 text-center">
-              <Eye className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Eye className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Insights</h3>
               <p className="text-white/70">Live data monitoring and instant alerts for critical business metrics.</p>
             </GlassCard>

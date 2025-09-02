@@ -4,7 +4,16 @@ import { AboutStory } from "@/components/sections/about-story"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -12,7 +21,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6 tracking-wide">
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 BloomIntel
               </span>
             </h1>

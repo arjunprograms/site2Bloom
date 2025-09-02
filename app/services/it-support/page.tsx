@@ -8,7 +8,16 @@ import { Brain, Zap, Shield, Bot } from "lucide-react"
 
 export default function ITSupportPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -16,7 +25,7 @@ export default function ITSupportPage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6 tracking-wide">
               AI-POWERED{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 IT SUPPORT
               </span>
             </h1>
@@ -27,7 +36,7 @@ export default function ITSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <GlassCard className="p-6 text-center">
-              <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <Brain className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3 font-thin">Predictive Maintenance</h3>
               <p className="text-white/70 font-thin">
                 AI models predict system failures 72 hours in advance with 94% accuracy.
@@ -43,7 +52,7 @@ export default function ITSupportPage() {
             </GlassCard>
 
             <GlassCard className="p-6 text-center">
-              <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Zap className="w-12 h-12 text-lime-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3 font-thin">Auto-Optimization</h3>
               <p className="text-white/70 font-thin">
                 Self-tuning infrastructure that optimizes performance in real-time.
@@ -69,7 +78,7 @@ export default function ITSupportPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/70 font-thin">Issue Prevention Rate</span>
-                  <span className="text-blue-400 font-semibold">94%</span>
+                  <span className="text-lime-400 font-semibold">94%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/70 font-thin">Response Time</span>
@@ -77,7 +86,7 @@ export default function ITSupportPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/70 font-thin">Cost Reduction</span>
-                  <span className="text-cyan-400 font-semibold">67%</span>
+                  <span className="text-lime-400 font-semibold">67%</span>
                 </div>
               </div>
             </GlassCard>
@@ -86,7 +95,7 @@ export default function ITSupportPage() {
               <h2 className="text-2xl font-bold text-white mb-6 font-thin">Custom AI Models</h2>
               <ul className="space-y-3 text-white/70 font-thin">
                 <li className="flex items-start">
-                  <span className="text-blue-400 mr-2">•</span>
+                  <span className="text-lime-400 mr-2">•</span>
                   Network traffic pattern analysis with deep learning
                 </li>
                 <li className="flex items-start">
@@ -94,7 +103,7 @@ export default function ITSupportPage() {
                   Hardware failure prediction using sensor data
                 </li>
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">•</span>
+                  <span className="text-lime-400 mr-2">•</span>
                   Security anomaly detection with behavioral modeling
                 </li>
                 <li className="flex items-start">

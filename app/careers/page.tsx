@@ -7,19 +7,28 @@ import { Mail, MapPin, Clock, Users } from "lucide-react"
 
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/bg.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <Navbar />
 
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-6">
               Join Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-purple-400">
                 AI Revolution
               </span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Build the future of business automation with industry professionals who left big tech to solve humanity's
               greatest challenges.
             </p>
@@ -106,7 +115,7 @@ export default function CareersPage() {
                       </div>
                       <a
                         href="mailto:business@bloomintelai.com?subject=Junior AI Engineer Application&body=Hi BloomIntel Team,%0D%0A%0D%0AI'm interested in the Junior AI Engineer position. Please find my resume attached.%0D%0A%0D%0ABest regards"
-                        className="text-blue-400 hover:text-blue-300 font-semibold text-lg transition-colors duration-200"
+                        className="text-lime-400 hover:text-lime-300 font-semibold text-lg transition-colors duration-200"
                       >
                         business@bloomintelai.com
                       </a>

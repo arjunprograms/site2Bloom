@@ -44,7 +44,7 @@ export function SignInForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#007aff] focus:ring-2 focus:ring-[#007aff]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
+          className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#00ff88] focus:ring-2 focus:ring-[#00ff88]/20 transition-all duration-200 rounded-2xl h-14 text-base font-sans"
         />
       </div>
       <div className="space-y-3">
@@ -58,7 +58,7 @@ export function SignInForm({
             type={showPassword ? "text" : "password"}
             placeholder="Enter your password"
             required
-            className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#007aff] focus:ring-2 focus:ring-[#007aff]/20 transition-all duration-200 rounded-2xl h-14 pr-14 text-base font-sans"
+            className="bg-[#2c2c2e] border border-[#3a3a3c] text-white placeholder:text-[#8e8e93] focus:border-[#00ff88] focus:ring-2 focus:ring-[#00ff88]/20 transition-all duration-200 rounded-2xl h-14 pr-14 text-base font-sans"
           />
           <Button
             type="button"
@@ -78,7 +78,7 @@ export function SignInForm({
             id="remember"
             checked={rememberMe}
             onCheckedChange={setRememberMe}
-            className="border-[#3a3a3c] data-[state=checked]:bg-[#007aff] data-[state=checked]:border-[#007aff] rounded-lg"
+            className="border-[#3a3a3c] data-[state=checked]:bg-[#00ff88] data-[state=checked]:border-[#00ff88] rounded-lg"
           />
           <Label htmlFor="remember" className="text-base text-[#8e8e93] font-medium font-sans">
             Remember me
@@ -87,7 +87,7 @@ export function SignInForm({
         <Button
           type="button"
           variant="link"
-          className="text-base text-[#007aff] hover:text-[#0056cc] p-0 font-medium font-sans"
+          className="text-base text-[#00ff88] hover:text-[#00cc66] p-0 font-medium font-sans"
           onClick={onForgotPassword}
         >
           Forgot password?
@@ -96,7 +96,7 @@ export function SignInForm({
 
       <Button
         type="submit"
-        className="w-full bg-[#007aff] hover:bg-[#0056cc] text-white font-medium transition-all duration-200 transform hover:scale-[1.01] shadow-lg rounded-2xl h-14 mt-8 text-base font-sans"
+        className="w-full bg-[#00ff88] hover:bg-[#00cc66] text-black font-medium transition-all duration-200 transform hover:scale-[1.01] shadow-lg rounded-2xl h-14 mt-8 text-base font-sans"
         disabled={isLoading}
       >
         {isLoading ? (
