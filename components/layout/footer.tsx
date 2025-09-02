@@ -24,8 +24,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/it-support" className="hover:text-white">
-                  IT Support
+                <Link href="/services/custom-solutions" className="hover:text-white">
+                  Custom Solutions
                 </Link>
               </li>
               <li>
@@ -50,7 +50,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-white">
+                <Link href="/contact" className="hover:text-white">
                   Pricing
                 </Link>
               </li>
@@ -64,20 +64,17 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/careers" className="hover:text-white">
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60">© 2025 BloomIntel. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-white/60 hover:text-white">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-white/60 hover:text-white">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
