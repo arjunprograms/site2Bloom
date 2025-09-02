@@ -58,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} antialiased`}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" />
       </head>
       <body className="font-sans" style={{ fontFamily: "var(--font-space-grotesk)" }}>

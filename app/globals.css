@@ -117,7 +117,30 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* Added mobile-friendly scrolling rules */
+  html,
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Allow vertical scroll */
+    -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+    height: auto; /* Prevent height restrictions */
+    min-height: 100vh; /* Use min-height instead of fixed height */
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
+  }
+
+  /* Ensure scrollable containers work properly on mobile */
+  .scrollable {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix viewport height issues on mobile */
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh; /* Use dynamic viewport height when supported */
   }
 }
