@@ -19,22 +19,22 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2 text-white/80">
               <li>
-                <Link href="/solutions#ai-automation" className="hover:text-white">
+                <Link href="/services/ai-automation" className="hover:text-white">
                   AI Automation
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#it-support" className="hover:text-white">
+                <Link href="/services/it-support" className="hover:text-white">
                   IT Support
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#analytics" className="hover:text-white">
+                <Link href="/services/business-analytics" className="hover:text-white">
                   Business Analytics
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#crm" className="hover:text-white">
+                <Link href="/services/crm-systems" className="hover:text-white">
                   CRM Systems
                 </Link>
               </li>

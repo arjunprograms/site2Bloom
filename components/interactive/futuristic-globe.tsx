@@ -9,8 +9,15 @@ export function FuturisticGlobe() {
   const rotationRef = useRef({ x: 0, y: 0 })
   const autoRotateRef = useRef(0)
   const [isDragging, setIsDragging] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || "ontouchstart" in window)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -82,7 +89,7 @@ export function FuturisticGlobe() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       const currentRotX = rotationRef.current.x
-      const currentRotY = rotationRef.current.y + (isDragging ? 0 : autoRotateRef.current)
+      const currentRotY = rotationRef.current.y + (!isMobile && isDragging ? 0 : autoRotateRef.current)
 
       ctx.strokeStyle = "rgba(255, 255, 255, 0.1)"
       ctx.lineWidth = 1
@@ -135,13 +142,15 @@ export function FuturisticGlobe() {
       ctx.arc(centerX, centerY, radius * 0.8, 0, Math.PI * 2)
       ctx.fill()
 
-      if (!isDragging) {
+      if (isMobile || !isDragging) {
         autoRotateRef.current += 0.005
       }
       animationRef.current = requestAnimationFrame(draw)
     }
 
     const handleMouseDown = (e: MouseEvent) => {
+      if (isMobile) return
+
       const rect = canvas.getBoundingClientRect()
       mouseRef.current.isDown = true
       mouseRef.current.x = e.clientX - rect.left
@@ -151,9 +160,8 @@ export function FuturisticGlobe() {
     }
 
     const handleMouseMove = (e: MouseEvent) => {
-      if (!mouseRef.current.isDown) return
+      if (!mouseRef.current.isDown || isMobile) return
 
-      // Only prevent default when actually dragging the globe
       e.preventDefault()
 
       const rect = canvas.getBoundingClientRect()
@@ -173,80 +181,53 @@ export function FuturisticGlobe() {
     }
 
     const handleMouseUp = () => {
+      if (isMobile) return
       mouseRef.current.isDown = false
       setIsDragging(false)
       console.log("[v0] Mouse up")
     }
 
     const handleTouchStart = (e: TouchEvent) => {
-      if (e.touches.length === 1) {
-        const touch = e.touches[0]
-        const rect = canvas.getBoundingClientRect()
-        mouseRef.current.isDown = true
-        mouseRef.current.x = touch.clientX - rect.left
-        mouseRef.current.y = touch.clientY - rect.top
-        setIsDragging(true)
-        // Only prevent default for single touch to allow scrolling with other gestures
-        e.preventDefault()
-      }
+      return
     }
 
     const handleTouchMove = (e: TouchEvent) => {
-      if (!mouseRef.current.isDown || e.touches.length !== 1) return
-
-      const touch = e.touches[0]
-      const rect = canvas.getBoundingClientRect()
-      const currentX = touch.clientX - rect.left
-      const currentY = touch.clientY - rect.top
-
-      const deltaX = currentX - mouseRef.current.x
-      const deltaY = currentY - mouseRef.current.y
-
-      rotationRef.current.y += deltaX * 0.01
-      rotationRef.current.x += deltaY * 0.01
-
-      mouseRef.current.x = currentX
-      mouseRef.current.y = currentY
-
-      e.preventDefault()
+      return
     }
 
     const handleTouchEnd = () => {
-      mouseRef.current.isDown = false
-      setIsDragging(false)
+      return
     }
 
     canvas.addEventListener("mousedown", handleMouseDown)
     document.addEventListener("mousemove", handleMouseMove)
     document.addEventListener("mouseup", handleMouseUp)
-    canvas.addEventListener("touchstart", handleTouchStart, { passive: false })
-    canvas.addEventListener("touchmove", handleTouchMove, { passive: false })
-    canvas.addEventListener("touchend", handleTouchEnd)
     canvas.addEventListener("contextmenu", (e) => e.preventDefault())
 
     draw()
 
     return () => {
+      window.removeEventListener("resize", checkMobile)
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
       canvas.removeEventListener("mousedown", handleMouseDown)
       document.removeEventListener("mousemove", handleMouseMove)
       document.removeEventListener("mouseup", handleMouseUp)
-      canvas.removeEventListener("touchstart", handleTouchStart)
-      canvas.removeEventListener("touchmove", handleTouchMove)
-      canvas.removeEventListener("touchend", handleTouchEnd)
       canvas.removeEventListener("contextmenu", (e) => e.preventDefault())
     }
-  }, [])
+  }, [isMobile, isDragging])
 
   return (
     <canvas
       ref={canvasRef}
       width={500}
       height={500}
-      className={`${isDragging ? "cursor-grabbing" : "cursor-grab"} select-none`}
-      style={{ display: "block", touchAction: "pan-y pinch-zoom" }}
+      className={`${!isMobile && isDragging ? "cursor-grabbing" : !isMobile ? "cursor-grab" : ""} select-none`}
+      style={{
+        display: "block",
+        touchAction: isMobile ? "auto" : "pan-y pinch-zoom",
+      }}
     />
   )
 }
